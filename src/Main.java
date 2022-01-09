@@ -1,57 +1,58 @@
 /**
- * Creator: David Brunner
+ * Developer: David Brunner
  * Date: 4/15/2021
  * Description: Creates a Main class that extends Application and implements JavaFX features to create a representation of a Poker Game 
  */
 
-//Imports the overall JavaFX Application class
 import javafx.application.Application;
-import javafx.geometry.Pos; //Imports the Pos class from JavaFX
-import javafx.stage.Stage; //Imports the Stage class from JavaFX
-import javafx.util.Duration; //Imports the Duration class from JavaFX
+import javafx.geometry.Pos;
+import javafx.stage.Stage;
+import javafx.util.Duration;
 
-import javafx.scene.Scene; //Imports the Scene class from JavaFX
-import javafx.scene.control.Button; //Imports the Button class from JavaFX
-import javafx.scene.control.ContentDisplay; //Imports the ContentDisplay class from JavaFX
-import javafx.scene.control.Label; //Imports the Label class from JavaFX
-import javafx.scene.control.RadioButton; //Imports the Radio Button class from JavaFX
-import javafx.scene.control.TextField; //Imports the TextField class from JavaFX
-import javafx.scene.layout.VBox; //Imports the VBox class from JavaFX
-import javafx.scene.paint.Color; //Imports the Color class from JavaFX
-import javafx.scene.text.Font; //Imports the Font class from JavaFX
-import javafx.scene.text.Text; //Imports the Text class from JavaFX
-import javafx.scene.text.TextAlignment; //Imports the Text Alignment class from JavaFX
-import javafx.scene.layout.HBox; //Imports the HBox class from JavaFX
-import javafx.scene.image.Image; //Imports the Image class from JavaFX
-import javafx.scene.image.ImageView; //Imports the ImageView class from JavaFX to display the images
-import javafx.scene.Camera; //Imports the Camera class from JavaFX
-import javafx.scene.PerspectiveCamera; //Imports the PerspectiveCamera class from JavaFX
-import javafx.scene.transform.Rotate; //Imports the Rotate class from JavaFX
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.ContentDisplay;
+import javafx.scene.control.Label;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextAlignment;
+import javafx.scene.layout.HBox;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.Camera;
+import javafx.scene.PerspectiveCamera;
+import javafx.scene.transform.Rotate;
 
-import java.util.ArrayList; //Imports the ArrayList class from java.util
-import java.util.regex.Matcher; //Imports the Matcher class from java.util
-import java.util.regex.Pattern; //Imports the Pattern class from java.util
+import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-import javafx.animation.FadeTransition; //Imports the FadeTransition class from JavaFX
-import javafx.animation.Interpolator; //Imports the Interpolator class from JavaFX
-import javafx.animation.RotateTransition; //Imports the RotateTransition class from JavaFX
-import javafx.animation.TranslateTransition; //Imports the TranslateTransition class from JavaFX
+import javafx.animation.FadeTransition;
+import javafx.animation.Interpolator;
+import javafx.animation.RotateTransition;
+import javafx.animation.TranslateTransition;
 
 /** The public class Main contains several methods and data fields for designing and creating the JavaFX application by extending the Application class and overriding its start method */
 public class Main extends Application {
-	private PokerCards userDeck = new PokerCards(); //Creates the PokerCards class representing the deck of cards for the user
-	private PokerCards cpuDeck = new PokerCards(userDeck, true); //Creates the PokerCards class representing the deck of cards for the cpu
+	//Creates the PokerCards classes representing the deck of cards for the user and cpu
+	private PokerCards userDeck = new PokerCards();
+	private PokerCards cpuDeck = new PokerCards(userDeck, true);
 	
-	private ImageView card0 = userDeck.getCard(0); //Retrieves the first image in a hand of 5 from the deck of cards 
-	private int card0Index = userDeck.getCardIndex(0); //Retrieves the first image's index from the deck of cards 
-	private ImageView card1 = userDeck.getCard(1); //Retrieves the second image in a hand of 5 from the deck of cards 
-	private int card1Index = userDeck.getCardIndex(1); //Retrieves the second image's index from the deck of cards 
-	private ImageView card2 = userDeck.getCard(2); //Retrieves the third image in a hand of 5 from the deck of cards 
-	private int card2Index = userDeck.getCardIndex(2); //Retrieves the third image's index from the deck of cards 
-	private ImageView card3 = userDeck.getCard(3); //Retrieves the fourth image in a hand of 5 from the deck of cards 
-	private int card3Index = userDeck.getCardIndex(3); //Retrieves the fourth image's index from the deck of cards 
-	private ImageView card4 = userDeck.getCard(4); //Retrieves the fifth image in a hand of 5 from the deck of cards 
-	private int card4Index = userDeck.getCardIndex(4); //Retrieves the fifth image's index from the deck of cards 
+	//Retrieves the images and indexes, or unique integer between 0 and 54, for each card within the user's deck
+	private ImageView card0 = userDeck.getCard(0);
+	private int card0Index = userDeck.getCardIndex(0);
+	private ImageView card1 = userDeck.getCard(1); 
+	private int card1Index = userDeck.getCardIndex(1);
+	private ImageView card2 = userDeck.getCard(2);
+	private int card2Index = userDeck.getCardIndex(2);
+	private ImageView card3 = userDeck.getCard(3);
+	private int card3Index = userDeck.getCardIndex(3);
+	private ImageView card4 = userDeck.getCard(4);
+	private int card4Index = userDeck.getCardIndex(4);
 	
 	private ImageView backRed0 = new ImageView(new Image("card_image/br2.png")); //Creates the red background image option for the first card 
 	private ImageView backBlue0 = new ImageView(new Image("card_image/bb2.png")); //Creates the blue background image option for the first card 
