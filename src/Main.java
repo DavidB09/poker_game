@@ -1,12 +1,8 @@
 /**
- * Class: COSC 1174 - Class Project: Jokers Wild!
- * Instructor: Professor Greg Yera
- * Group Members: David Brunner, Samson Oyewale 
+ * Creator: David Brunner
  * Date: 4/15/2021
  * Description: Creates a Main class that extends Application and implements JavaFX features to create a representation of a Poker Game 
  */
-
-//Designates the specific package of application
 
 //Imports the overall JavaFX Application class
 import javafx.application.Application;

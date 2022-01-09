@@ -1,12 +1,8 @@
 /**
- * Class: COSC 1174 - Class Project: Jokers Wild!
- * Instructor: Professor Greg Yera
- * Group Members: David Brunner, Samson Oyewale 
+ * Creator: David Brunner
  * Date: 4/15/2021
  * Description: Creates a FindWinner class that receives two hands of cards and evaluates them to see which contains the better value
  */
-
-//Designates the specific package of application
 
 
 //Imports ArrayList from java.util

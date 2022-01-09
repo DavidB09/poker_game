@@ -1,12 +1,8 @@
 /**
- * Class: COSC 1174 - Class Project: Jokers Wild!
- * Instructor: Professor Greg Yera
- * Group Members: David Brunner, Samson Oyewale 
+ * Creator: David Brunner
  * Date: 4/15/2021
  * Description: Creates a PokerCards class that creates a deck of cards and contains several helpful methods for evaluating and exchanging a hand of 5
  */
-
-//Designates the specific package of application
 
 import java.util.ArrayList; //Imports the ArrayList functionality from java.util
 
